@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 222,
+    "details": "Um evento",
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/ce5dcc7a-00c0-459f-95d4-54d4567446d4/attendees
+Content-Type: application/json
+
+{
+    "name": "Rui Pereira",
+    "email": "rui2@sygpoint.com"
+}
+
+###
+
+GET http://localhost:3333/events/c3adc706-7386-43ae-8f74-8e0a964d765a
+
+###
+
+GET http://localhost:3333/attendees/3/badge
+
+###
+
+GET http://localhost:3333/attendees/1/check-in
+
+###
+
+GET http://localhost:3333/events/c3adc706-7386-43ae-8f74-8e0a964d765a/attendees?query=rui
